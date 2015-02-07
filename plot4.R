@@ -40,13 +40,13 @@ plot(DT$DATETIME,DT$Global_active_power,type="l",xlab="",ylab="Global Active Pow
 plot(DT$DATETIME,DT$Voltage,type="l",ylab="Voltage",xlab="datetime",cex.lab=cex_lab,cex.axis=cex_lab)
 
 Sys.setlocale("LC_TIME", "us")
-leg.txt <- c("Sub_metering_1   ","Sub_metering_2   ","Sub_metering_3   ")
+leg.txt <- c("Sub_metering_1    ","Sub_metering_2   ","Sub_metering_3   ")
 #legend("topright", leg.txt, cex=0.4, box.lty = 0, adj=0.1, col=c("black","red","blue"), lty = 1)
 plot(DT$DATETIME,DT$Sub_metering_1,type="l", xlab="",ylab="Energy sub metering"
      ,cex.lab=cex_lab,cex.axis=cex_lab)
 points(DT$DATETIME,DT$Sub_metering_2,col="red",type="l")
 points(DT$DATETIME,DT$Sub_metering_3,col="blue",type="l")
-legend("topright", leg.txt, cex=0.5, bty = "n", inset=0.01, col=c("black","red","blue"), lty = 1)
+legend("topright", leg.txt, cex=0.6, bty = "n", inset=c(0.2,0.001), col=c("black","red","blue"), lty = 1)
 
 plot(DT$DATETIME,DT$Global_reactive_power,type="l",xlab="datetime",ylab="Global_reactive_power"
      ,cex.lab=cex_lab,cex.axis=cex_lab)
